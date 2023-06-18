@@ -83,7 +83,7 @@ export default function Navheader(props) {
             edge="start"
             onClick={handleDrawerToggle}
             sx={{
-              mr: 2, display: { md: 'none' }}}
+              mr: 2, display: { sm: 'none' }}}
           >
             <MenuIcon />
           </IconButton>
@@ -102,7 +102,7 @@ export default function Navheader(props) {
            
 
           </Box>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Box sx={{ display: { xs: 'none', sm: 'block'  } }}>
             {navItems.map((item) => (
               <Button key={item} sx={{ color: 'primary.main' }}
                 variant='text'
@@ -129,7 +129,7 @@ export default function Navheader(props) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
+            display: { xs: 'block', sm: 'none'  },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
