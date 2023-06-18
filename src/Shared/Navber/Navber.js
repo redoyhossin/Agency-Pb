@@ -13,7 +13,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import agencylogo from '../../Assets/agency-logo.png';
-import { Typography } from '@mui/material';
 
 
 const drawerWidth = 240;
