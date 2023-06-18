@@ -11,18 +11,15 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import agencylogo from '../../Assets/agency-logo.png';
+import { Typography } from '@mui/material';
 
-// interface Props {
-  
-//   window?: () => Window;
-// }
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+const navItems = ['Home', 'Our Portfolio', 'Our Team', 'Contact Us'];
 
-export default function DrawerAppBar(props: Props) {
+export default function Navheader(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -32,19 +29,35 @@ export default function DrawerAppBar(props: Props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
-      </Typography>
+      <Box
+        sx={{ mt: '1rem' }}
+
+      >
+        <img
+          style={{ width: '50px', borderRadius: '35px' }}
+
+
+          src={agencylogo} alt="agency-logo"
+        />
+
+
+      </Box>
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+          <ListItem key={item} disablePadding >
             <ListItemButton sx={{ textAlign: 'center' }}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
         ))}
+        <Button
+          sx={{ bgcolor: 'primary.green' }}
+        >
+          Login
+        </Button>
       </List>
+
     </Box>
   );
 
@@ -53,30 +66,57 @@ export default function DrawerAppBar(props: Props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav">
+      <AppBar
+        component="nav"
+        sx={{
+          position: 'static',
+          boxShadow: 'none',
+          backgroundColor: 'transparent',
+          mt: 2
+
+
+        }}
+      >
         <Toolbar>
           <IconButton
-            color="inherit"
+            color='primary'
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{
+              mr: 2, display: { md: 'none' }}}
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h6"
+          <Box
+
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block', p: '0', m: '0' } }}
           >
-            MUI
-          </Typography>
+            <Box sx={{mt:"2px"}}>
+              <img
+                style={{ width: '60px', borderRadius: '35px', p: '0', m: '0' }}
+
+                src='https://i.ibb.co/0KLDJ2H/agency-logo.png' alt="agency-logo"
+              />
+            </Box>
+           
+
+          </Box>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
+              <Button key={item} sx={{ color: 'primary.main' }}
+                variant='text'
+              >
                 {item}
               </Button>
+
             ))}
+            <Button
+              sx={{ bgcolor: 'primary.green' }}
+            >
+              Login
+            </Button>
           </Box>
         </Toolbar>
       </AppBar>
@@ -98,8 +138,8 @@ export default function DrawerAppBar(props: Props) {
         </Drawer>
       </Box>
       <Box component="main" sx={{ p: 3 }}>
-        <Toolbar />
-        
+      
+
       </Box>
     </Box>
   );

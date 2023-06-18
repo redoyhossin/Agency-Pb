@@ -1,9 +1,11 @@
 import React from 'react';
+import Brandinghed from '../Brandinghed/Brandinghed';
+
 
 const Home = () => {
     return (
         <div>
-            <h1>git try</h1>
+            <Brandinghed/>
         </div>
     );
 };
