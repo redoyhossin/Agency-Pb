@@ -1,6 +1,7 @@
 import React from 'react';
 import Brandinghed from '../Brandinghed/Brandinghed';
 import BrandBody from '../BrandBody/BrandBody';
+import Brandservices from '../Brandservices/Brandservices';
 
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
         <div>
             <Brandinghed />
             <BrandBody />
+            <Brandservices/>
             
         </div>
     );

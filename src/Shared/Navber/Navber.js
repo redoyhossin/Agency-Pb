@@ -83,14 +83,14 @@ export default function Navheader(props) {
             edge="start"
             onClick={handleDrawerToggle}
             sx={{
-              mr: 2, display: { sm: 'none' }}}
+              mr: 2, display: { md: 'none' }}}
           >
             <MenuIcon />
           </IconButton>
           <Box
 
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block', p: '0', m: '0' } }}
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'none', p: '0', m: '0' } }}
           >
             <Box sx={{mt:"2px"}}>
               <img
@@ -102,7 +102,7 @@ export default function Navheader(props) {
            
 
           </Box>
-          <Box sx={{ display: { xs: 'none', sm: 'block'  } }}>
+          <Box sx={{ display: { xs: 'none', sm: 'none',md:'block'  } }}>
             {navItems.map((item) => (
               <Button key={item} sx={{ color: 'primary.main' }}
                 variant='text'
@@ -129,7 +129,7 @@ export default function Navheader(props) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'none'  },
+            display: { xs: 'block', sm: 'block'  },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
