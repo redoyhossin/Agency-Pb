@@ -90,7 +90,7 @@ export default function Navheader(props) {
           <Box
 
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'none', p: '0', m: '0' } }}
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'none',lg:'block', p: '0', m: '0' } }}
           >
             <Box sx={{mt:"2px"}}>
               <img
@@ -107,8 +107,8 @@ export default function Navheader(props) {
               <Button key={item} sx={{ color: 'primary.main' }}
                 variant='text'
               >
-                {item}
-              </Button>
+                {item} 
+              </Button> 
 
             ))}
             <Button

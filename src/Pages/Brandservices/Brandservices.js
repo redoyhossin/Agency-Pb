@@ -13,7 +13,7 @@ const Brandservices = () => {
     return (
         <Box >
             <Servicestitle
-                title='Provide Awesome ' colored='service'
+                title='Provide Awesome ' colored='service' 
             />
 
             <Grid container spacing={3}>

@@ -2,6 +2,7 @@ import React from 'react';
 import Brandinghed from '../Brandinghed/Brandinghed';
 import BrandBody from '../BrandBody/BrandBody';
 import Brandservices from '../Brandservices/Brandservices';
+import Ourwork from '../Ourwork.js/Ourwork';
 
 
 const Home = () => {
@@ -9,7 +10,9 @@ const Home = () => {
         <div>
             <Brandinghed />
             <BrandBody />
-            <Brandservices/>
+            <Brandservices />
+            <Ourwork />
+            
             
         </div>
     );
