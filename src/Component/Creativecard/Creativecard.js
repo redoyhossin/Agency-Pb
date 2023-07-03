@@ -4,20 +4,19 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
 import AddTaskIcon from '@mui/icons-material/AddTask';
 
 
 
-export const Creativecard = () => {
+export const Creativecard = ({img}) => {
     return (
-        <Box sx={{ my: 10 }}>
+        <Box>
             <Card sx={{ minWidth: 345, maxWidth: 345, p: 2, borderRadius: '13px' }}>
-                <CardActionArea >
+                 
                     <CardMedia
                         component="img"
                         height="189"
-                        image="https://images.unsplash.com/photo-1593789198788-8b21805d5fdb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                        image={img}
                         alt="green iguana"
                         style={{ borderRadius: '12px' }}
                     />
@@ -29,7 +28,7 @@ export const Creativecard = () => {
                         },
                         display: 'flex',
                         justifyContent: 'space-between',
-                        alignItems:'center'
+                        alignItems: 'center'
 
                     }}>
                         <Box>
@@ -40,20 +39,17 @@ export const Creativecard = () => {
                                 Lizards are a widespread group o, with over 6,000
                             </Typography>
                         </Box>
-                        <IconButton sx={{
-                            
-                            '& svg': {
-                                color: 'primary.main',
-                            
-                            
-                            },
-                           
-                            
-                        }}>
-                            <AddTaskIcon />
-                        </IconButton>
+                        
+                            <IconButton sx={{
+                                '& svg': {
+                                    color: 'primary.main',
+                                },
+                            }}>
+                                <AddTaskIcon />
+                            </IconButton>
+                    
                     </CardContent>
-                </CardActionArea>
+                
             </Card>
         </Box>
     )

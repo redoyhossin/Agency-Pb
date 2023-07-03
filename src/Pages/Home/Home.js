@@ -3,6 +3,7 @@ import Brandinghed from '../Brandinghed/Brandinghed';
 import BrandBody from '../BrandBody/BrandBody';
 import Brandservices from '../Brandservices/Brandservices';
 import Ourwork from '../Ourwork.js/Ourwork';
+import { Clientsfeed } from '../Clientsfeed/Clientsfeed';
 
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
             <BrandBody />
             <Brandservices />
             <Ourwork />
+            <Clientsfeed/>
             
             
         </div>

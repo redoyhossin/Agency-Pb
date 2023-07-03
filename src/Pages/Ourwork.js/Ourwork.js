@@ -1,9 +1,10 @@
-import { Box, IconButton, Tab, Tabs, } from '@mui/material';
+import { Box, Grid, IconButton, Tab, Tabs, } from '@mui/material';
 import React from 'react';
 import Servicestitle from '../../Component/Servicestitle/Servicestitle';
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import { Creativecard } from '../../Component/Creativecard/Creativecard';
+import { carddata } from '../Carddata/Carddata';
 
 const Ourwork = () => {
     const [value, setValue] = React.useState(0);
@@ -13,7 +14,7 @@ const Ourwork = () => {
         setValue(newValue);
     };
     return (
-        <Box>
+        <Box sx={{mb:12}}>
 
             <Box sx={{ my: 6 }}>
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
@@ -68,7 +69,18 @@ const Ourwork = () => {
                 </Box>
 
             </Box>
-            <Creativecard/>
+
+            
+            <Grid container spacing={4} justifyContent='center'>
+                {
+                    carddata[value].map((img,i) => (
+                        <Grid item key={i}>
+                            <Creativecard  img={img}  />
+                        </Grid>
+                    ))
+                }
+            </Grid>
+
 
         </Box>
     );
